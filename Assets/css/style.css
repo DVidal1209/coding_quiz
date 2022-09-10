@@ -4,16 +4,19 @@
     padding: 10px;
 }
 
-.nav a{
+.nav #view_scores{
     display: flex;
     align-items: center;
+    color: pink;
 }
 
 
 body{
+    background-color: slateblue;
+    color:aliceblue;
     display: flex;
     flex-direction: column;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 18px;
     line-height: 120%;
 }
@@ -33,35 +36,37 @@ h2{
     margin: auto;
 }
 
-.start{
+/* Formatting for start area upon loading page as well as the high scores page */
+.start,
+.high_scores{
     display: flex;
     flex-direction: column;
     width: fit-content;
+    max-width: 50%;
     text-align: center;
 }
 
-#btn_start{
-    display: flex;
-    width: fit-content;
-}
-
+/* Formatting for question area */
 .question{
     display: flex;
     flex-direction: column;
-    text-align: center;
-
+    max-width: 50%;
 }
 
+/* Formatting for answers */
 .answers{
     display: flex;
     flex-direction: column;
-    width: fit-content;
 }
 
+/* Formatting for all the buttons on the page */
 .btn{
     text-align: start;
     background-color: purple;
     color: white;
     margin: 2px 0 2px 0;
+    padding: 0 5px 0 5px;
     border-radius: 3px;
+    width: fit-content;
+    border: none;
 }

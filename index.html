@@ -11,8 +11,8 @@
 <body>
     <header>
         <div class="nav">
-            <a id="view_scores" href="">View high scores</a>
-            <p>Time: <span class="time"></span></p>
+            <p id="view_scores">View high scores</p >
+            <p>Time: <span id="time"></span></p>
         </div>
     </header>
     <div class ="start center">
@@ -21,54 +21,82 @@
         </h1>
         <p>
             Try to answer the following coding-related questions within the time limit.
-            <br>
             Keep in mind that incorrect answers will penalize score/time by 
-            <br>
             ten seconds
         </p>
+        <br>
         <button class="btn" id="btn_start">Start Quiz</button>
     </div>
     <div class="question center" id="question_1">
         <h2>
             Commonly used data types DO NOT include:
         </h2>
+        <br>
         <div class="answers">
-            <button class="btn">String</button>
-            <button class="btn">Number</button>
-            <button class="btn">Boolean</button>
-            <button class="btn">Alerts</button>
+            <button class="btn" id="q1_string">String</button>
+            <button class="btn" id="q1_num">Number</button>
+            <button class="btn" id="q1_bool">Boolean</button>
+            <button class="btn" id="q1_alerts">Alerts</button>
         </div>
     </div>
     <div class="question center" id="question_2">
         <h2>
             The condition in an if/else statement is enclosed within:
         </h2>
+        <br>
         <div class="answers">
-            <button class="btn">Quotes</button>
-            <button class="btn">Curly Brackets</button>
-            <button class="btn">Parenthesis</button>
-            <button class="btn">Square Brackets</button>
+            <button class="btn" id="q2_quotes">Quotes</button>
+            <button class="btn" id="q2_curly">Curly Brackets</button>
+            <button class="btn" id="q2_parenthesis">Parenthesis</button>
+            <button class="btn" id="q2_square">Square Brackets</button>
         </div>
     </div>
     <div class="question center" id="question_3">
         <h2>
             Arrays in Javascript can be used to store:  
         </h2>
+        <br>
         <div class="answers">
-            <button class="btn">Numbers and Strings</button>
-            <button class="btn">Other Arrays</button>
-            <button class="btn">Booleans</button>
-            <button class="btn">All of the above</button>
+            <button class="btn" id="q3_num">Numbers and Strings</button>
+            <button class="btn" id="q3_arrays">Other Arrays</button>
+            <button class="btn" id="q3_bool">Booleans</button>
+            <button class="btn" id="q3_all">All of the above</button>
         </div>
     </div>
     <div class="question center" id="question_4">
-        
+        <h2>
+            Strings must be enclosed in ____________ when being assigned to variables.
+        </h2>
+        <br>
+        <div class="answers">
+            <button class="btn" id="q4_commas">Commas</button>
+            <button class="btn" id="q4_curly">Curly Brackets</button>
+            <button class="btn" id="q4_quotes">Quotes</button>
+            <button class="btn" id="q4_parenthesis">Parenthesis</button>
+        </div>
     </div>
     <div class="question center" id="question_5">
-        
+        <h2>
+            A very useful tool during development and debugging for printing content to the debugger is:
+        </h2>
+        <br>
+        <div class="answers">
+            <button class="btn" id="">JavaScript</button>
+            <button class="btn" id="">Terminal/Bash</button>
+            <button class="btn" id="">For Loops</button>
+            <button class="btn" id="">console.log</button>
+        </div>
     </div>
-    <div class="question center" id="question_6">
-        
+    <div class="center" id="game_over">
+        <h1>
+            All done!
+        </h1>
+        <p>
+            Your Final score is <span id =""></span>
+        </p>
+    </div>
+    <div class="high_scores center" id="high_scores">
+
     </div>
 </body>
 </html>
