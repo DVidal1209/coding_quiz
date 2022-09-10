@@ -1,26 +1,27 @@
-.nav{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.nav #view_scores{
-    display: flex;
-    align-items: center;
-    color: pink;
-}
-
-
 body{
     background-color: slateblue;
     color:aliceblue;
     display: flex;
     flex-direction: column;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 30px;
     line-height: 120%;
 }
 
+/* Top header formatting */
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.top #view_scores{
+    display: flex;
+    align-items: center;
+    color: pink;
+}
+
+/* Headings formatting */
 h1{
     font-size: 200%;
     line-height: 150%;
@@ -48,7 +49,7 @@ h2{
 
 /* Formatting for question area */
 .question{
-    display: flex;
+    display: none;
     flex-direction: column;
     max-width: 50%;
 }
@@ -68,5 +69,14 @@ h2{
     padding: 0 5px 0 5px;
     border-radius: 3px;
     width: fit-content;
-    border: none;
+}
+
+/* Turn off the game over display */
+#game_over{
+    display: none;
+}
+
+/* Turn off the high scores display */
+#high_scores{
+    display: none;
 }
