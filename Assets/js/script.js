@@ -235,4 +235,16 @@ function showIncorrect(){
     }, 1000)
 }
 
+// back button event listener
+btnBack.addEventListener("click", function(event){
+    event.preventDefault();
+    highScores.style.display="none";
+    start.style.display="flex";
+})
+
+// reset button event listener
+btnReset.addEventListener("click", function(event){
+    event.preventDefault();
+    scoresList.innerHTML="";
+})
 init();
