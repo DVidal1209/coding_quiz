@@ -79,6 +79,7 @@ h2{
 /* Turn off the high scores display */
 #high_scores{
     display: none;
+    flex-direction: column;
 }
 
 #right_or_wrong{
