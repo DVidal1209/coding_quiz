@@ -16,7 +16,6 @@ var btnBack = document.getElementById("back");
 var btnReset = document.getElementById("reset");
 var score =0;
 var timeLeft = 100;
-var correct = 0;
 var initials = [];
 var scores = [];
 
@@ -31,7 +30,6 @@ function startDisplay(){
 function q1Correct(){
     q1.style.display="none";
     q2.style.display="flex";
-    correct++;
     showCorrect();
 }
 
@@ -47,7 +45,6 @@ function q1Wrong(){
 function q2Correct(){
     q2.style.display="none";
     q3.style.display="flex";
-    correct++;
     showCorrect();
 }
 
@@ -63,7 +60,6 @@ function q2Wrong(){
 function q3Correct(){
     q3.style.display="none";
     q4.style.display="flex";
-    correct++;
     showCorrect();
 }
 
@@ -79,7 +75,6 @@ function q3Wrong(){
 function q4Correct(){
     q4.style.display="none";
     q5.style.display="flex";
-    correct++;
     showCorrect();
 }
 
@@ -95,7 +90,6 @@ function q4Wrong(){
 function q5Correct(){
     q5.style.display="none";
     over.style.display="flex";
-    correct++;
     rightWrong.style.display="none";
     score = timeLeft;
     timeLeft = 0;
