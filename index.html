@@ -12,10 +12,10 @@
     <header>
         <div class="top">
             <p id="view_scores">View high scores</p >
-            <p>Time: <span id="time"></span></p>
+            <p>Time: <span id="time">0</span></p>
         </div>
     </header>
-    <div class ="start center">
+    <div class ="start center" id="start">
         <h1>
             Coding Quiz Challenge
         </h1>
@@ -25,7 +25,7 @@
             ten seconds
         </p>
         <br>
-        <button class="btn" id="btn_start">Start Quiz</button>
+        <button class="btn" id="btn_start" onclick="startDisplay()"> Start Quiz</button>
     </div>
     <div class="question center" id="question_1">
         <h2>
@@ -33,10 +33,10 @@
         </h2>
         <br>
         <div class="answers">
-            <button class="btn" id="q1_string">String</button>
-            <button class="btn" id="q1_num">Number</button>
-            <button class="btn" id="q1_bool">Boolean</button>
-            <button class="btn" id="q1_alerts">Alerts</button>
+            <button class="btn" id="q1_string" onclick="q1Wrong()">String</button>
+            <button class="btn" id="q1_num" onclick="q1Wrong()">Number</button>
+            <button class="btn" id="q1_bool" onclick="q1Wrong()">Boolean</button>
+            <button class="btn" id="q1_alerts"onclick="q1Correct()">Alerts</button>
         </div>
     </div>
     <div class="question center" id="question_2">
@@ -45,10 +45,10 @@
         </h2>
         <br>
         <div class="answers">
-            <button class="btn" id="q2_quotes">Quotes</button>
-            <button class="btn" id="q2_curly">Curly Brackets</button>
-            <button class="btn" id="q2_parenthesis">Parenthesis</button>
-            <button class="btn" id="q2_square">Square Brackets</button>
+            <button class="btn" id="q2_quotes" onclick="q2Wrong()">Quotes</button>
+            <button class="btn" id="q2_curly" onclick="q2Correct()">Curly Brackets</button>
+            <button class="btn" id="q2_parenthesis" onclick="q2Wrong()">Parenthesis</button>
+            <button class="btn" id="q2_square" onclick="q2Wrong()">Square Brackets</button>
         </div>
     </div>
     <div class="question center" id="question_3">
@@ -57,10 +57,10 @@
         </h2>
         <br>
         <div class="answers">
-            <button class="btn" id="q3_num">Numbers and Strings</button>
-            <button class="btn" id="q3_arrays">Other Arrays</button>
-            <button class="btn" id="q3_bool">Booleans</button>
-            <button class="btn" id="q3_all">All of the above</button>
+            <button class="btn" id="q3_num" onclick="q3Wrong()">Numbers and Strings</button>
+            <button class="btn" id="q3_arrays" onclick="q3Wrong()">Other Arrays</button>
+            <button class="btn" id="q3_bool" onclick="q3Wrong()">Booleans</button>
+            <button class="btn" id="q3_all" onclick="q3Correct()">All of the above</button>
         </div>
     </div>
     <div class="question center" id="question_4">
@@ -69,10 +69,10 @@
         </h2>
         <br>
         <div class="answers">
-            <button class="btn" id="q4_commas">Commas</button>
-            <button class="btn" id="q4_curly">Curly Brackets</button>
-            <button class="btn" id="q4_quotes">Quotes</button>
-            <button class="btn" id="q4_parenthesis">Parenthesis</button>
+            <button class="btn" id="q4_commas" onclick="q4Wrong()">Commas</button>
+            <button class="btn" id="q4_curly" onclick="q4Wrong()">Curly Brackets</button>
+            <button class="btn" id="q4_quotes" onclick="q4Correct()">Quotes</button>
+            <button class="btn" id="q4_parenthesis" onclick="q4Wrong()">Parenthesis</button>
         </div>
     </div>
     <div class="question center" id="question_5">
@@ -81,20 +81,29 @@
         </h2>
         <br>
         <div class="answers">
-            <button class="btn" id="">JavaScript</button>
-            <button class="btn" id="">Terminal/Bash</button>
-            <button class="btn" id="">For Loops</button>
-            <button class="btn" id="">console.log</button>
+            <button class="btn" onclick="q5Wrong()">JavaScript</button>
+            <button class="btn"onclick="q5Correct()">Terminal/Bash</button>
+            <button class="btn" onclick="q5Wrong()">For Loops</button>
+            <button class="btn" onclick="q5Wrong()">console.log</button>
         </div>
     </div>
+    <div class="center" id="right_or_wrong">
+        <span id="check"></span>
+    </div>
     <div class="center" id="game_over">
-        <h1>
-            All done!
-        </h1>
-        <p>
-            Your Final score is <span id =""></span>. <br>
-            Enter your Initials: <input id="initials" placeholder="A.B."></input><button id="submit">Submit</button>
-        </p>
+        <ol>
+            <li>
+                <h1>
+                    All done!
+                </h1>
+            </li>
+            <li>
+                <p>
+                    Your Final score is: <span id ="final_score"></span><br>
+                    Enter your Initials: <input id="initials" placeholder="A.B."></input><button class="btn" id="submit">Submit</button>
+                </p>
+            </li>
+        </ol>
     </div>
     <div class="center" id="high_scores">
         <h1>
@@ -108,5 +117,6 @@
             <button class="btn" id="reset">Reset</button>
         </nav>
     </div>
+    <script rel="javascript" src="./Assets/js/script.js"></script>
 </body>
 </html>

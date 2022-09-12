@@ -65,7 +65,7 @@ h2{
     text-align: start;
     background-color: purple;
     color: white;
-    margin: 2px 0 2px 0;
+    margin: 2px;
     padding: 0 5px 0 5px;
     border-radius: 3px;
     width: fit-content;
@@ -78,5 +78,9 @@ h2{
 
 /* Turn off the high scores display */
 #high_scores{
+    display: none;
+}
+
+#right_or_wrong{
     display: none;
 }
