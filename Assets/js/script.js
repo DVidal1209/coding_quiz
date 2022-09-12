@@ -95,6 +95,7 @@ function q5Correct(){
     timeLeft = 0;
     showTime.textContent = timeLeft;
     document.getElementById("final_score").textContent = score;
+    showCorrect();
 }
 
 function q5Wrong(){
@@ -105,6 +106,7 @@ function q5Wrong(){
     timeLeft = 0;
     showTime.textContent = timeLeft;
     document.getElementById("final_score").textContent = score;
+    showIncorrect();
 }
 
 
