@@ -25,6 +25,7 @@ function q1Correct(){
     q1.style.display="none";
     q2.style.display="flex";
     correct++;
+    showCorrect();
 }
 
 function q1Wrong(){
@@ -32,6 +33,7 @@ function q1Wrong(){
     q2.style.display="flex";
     timeLeft=timeLeft-10;
     showTime.textContent = timeLeft;
+    showIncorrect();
 }
 
 // Question 2 Functionality
@@ -39,6 +41,7 @@ function q2Correct(){
     q2.style.display="none";
     q3.style.display="flex";
     correct++;
+    showCorrect();
 }
 
 function q2Wrong(){
@@ -46,6 +49,7 @@ function q2Wrong(){
     q3.style.display="flex";
     timeLeft=timeLeft-10;
     showTime.textContent = timeLeft;
+    showIncorrect();
 }
 
 // Question 3 Functionality
@@ -53,6 +57,7 @@ function q3Correct(){
     q3.style.display="none";
     q4.style.display="flex";
     correct++;
+    showCorrect();
 }
 
 function q3Wrong(){
@@ -60,6 +65,7 @@ function q3Wrong(){
     q4.style.display="flex";
     timeLeft=timeLeft-10;
     showTime.textContent = timeLeft;
+    showIncorrect();
 }
 
 // Question 4 Functionality
@@ -67,6 +73,7 @@ function q4Correct(){
     q4.style.display="none";
     q5.style.display="flex";
     correct++;
+    showCorrect();
 }
 
 function q4Wrong(){
@@ -74,6 +81,7 @@ function q4Wrong(){
     q5.style.display="flex";
     timeLeft=timeLeft-10;
     showTime.textContent = timeLeft;
+    showIncorrect();
 }
 
 // Question 5 functionality
@@ -132,4 +140,43 @@ function countDown() {
             showTime.textContent = 0;         
         }
     }, 1000)
+}
+
+// Display whether the answer was correct or not
+function showCorrect(){
+    var i = 6;
+    rightWrong.innerHTML="";
+    var correctCreate = document.createElement("p");
+    correctCreate.textContent = "Correct";
+    rightWrong.appendChild(correctCreate);
+    rightWrong.style.display="flex";
+    var timeInterval = setInterval(function (){
+        if (i > 1){
+            i--;
+        } else {
+            clearInterval(timeInterval);
+            rightWrong.style.display="none";
+            rightWrong.innerHTML="";
+        }
+    }, 1000)
+    setInterval(timeInterval);
+}
+
+function showIncorrect(){
+    var i = 2;
+    rightWrong.innerHTML="";
+    var incorrectCreate = document.createElement("p");
+    incorrectCreate.textContent = "Incorrect";
+    rightWrong.appendChild(incorrectCreate);
+    rightWrong.style.display="flex";
+    var timeInterval = setInterval(function (){
+        if (i > 1){
+            i--;
+        } else {
+            clearInterval(timeInterval);
+            rightWrong.style.display="none";
+            rightWrong.innerHTML="";
+        }
+    }, 1000)
+    setInterval(timeInterval);
 }
