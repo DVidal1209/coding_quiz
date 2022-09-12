@@ -239,6 +239,7 @@ btnBack.addEventListener("click", function(event){
 // reset button event listener
 btnReset.addEventListener("click", function(event){
     event.preventDefault();
-    scoresList.innerHTML="";
+    localStorage.clear();
+    renderScores();
 })
 init();
