@@ -163,7 +163,7 @@ btnSubmit.addEventListener("click", function(event){
     }
         initials.push(ini);
         scores.push(score);
-        ini.value="";
+        document.getElementById("initials").value="";
         showHighScores();
     storeScores();
     renderScores();
