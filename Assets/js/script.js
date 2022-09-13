@@ -196,38 +196,28 @@ function countDown() {
 
 // Display whether the answer was correct or not
 function showCorrect(){
-    var i = 6;
     rightWrong.innerHTML="";
     var correctCreate = document.createElement("p");
     correctCreate.textContent = "Correct";
     rightWrong.appendChild(correctCreate);
     rightWrong.style.display="flex";
-    var timeInterval = setInterval(function (){
-        if (i > 1){
-            i--;
-        } else {
+    var timeInterval = setTimeout(function (){
             clearInterval(timeInterval);
             rightWrong.style.display="none";
             rightWrong.innerHTML="";
-        }
     }, 1000)
 }
 
 function showIncorrect(){
-    var i = 2;
     rightWrong.innerHTML="";
     var incorrectCreate = document.createElement("p");
     incorrectCreate.textContent = "Incorrect";
     rightWrong.appendChild(incorrectCreate);
     rightWrong.style.display="flex";
-    var timeInterval = setInterval(function (){
-        if (i > 1){
-            i--;
-        } else {
+    var timeInterval = setTimeout(function (){
             clearInterval(timeInterval);
             rightWrong.style.display="none";
             rightWrong.innerHTML="";
-        }
     }, 1000)
 }
 
