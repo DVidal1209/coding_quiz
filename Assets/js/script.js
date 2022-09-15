@@ -233,6 +233,8 @@ btnReset.addEventListener("click", function(event){
     event.preventDefault();
     localStorage.removeItem("initials");
     localStorage.removeItem("scores");
+    scores=[];
+    initials=[];
     scoresList.innerHTML="";
 })
 init();
